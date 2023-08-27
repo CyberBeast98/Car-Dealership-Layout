@@ -12,10 +12,43 @@ li {
 button {
   padding: 12px 24px;
   border: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h3 {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 52px;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .align-center {
   display: flex;
+  align-items: center;
+}
+
+.align-center-column {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -24,6 +57,39 @@ button {
   font-weight: 600;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+.text--medium-regular {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.orange-button {
+  color: #FFFFFF;
+  background-color: #EE8313;
+  border: 1px solid #EE8313;
+  transition: 0.3s;
+}
+
+.orange-button:hover {
+  color: #EE8313;
+  background-color: transparent;
+  border: 1px solid #EE8313;
+}
+
+.transparent-button {
+  color: #EE8313;
+  background-color: transparent;
+  border: 1px solid #EE8313;
+  transition: 0.3s;
+}
+
+.transparent-button:hover {
+  color: #FFFFFF;
+  background-color: #EE8313;
+  border: 1px solid #EE8313;
 }
 
 .main {
@@ -38,9 +104,15 @@ button {
   background-color: transparent;
 }
 
+/*Header*/
+
 .header {
-  padding: 40px 0;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
+  background-color: #000000;
+  padding: 40px 0;
+  z-index: 10;
 }
 
 .menu {
@@ -49,6 +121,12 @@ button {
 
 .menu__item {
   margin-right: 50px;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.menu__item:hover {
+  border-bottom: 2px solid #EE8313;
 }
 
 .menu__link {
@@ -57,4 +135,66 @@ button {
 
 .header__button {
   background-color: #EE8313;
+}
+
+/*Hero section*/
+
+.hero__block {
+  width: 500px;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+}
+
+.hero__text {
+  margin-bottom: 50px;
+}
+
+.hero__button {
+  margin-right: 35px;
+}
+
+/*Rent section*/
+
+.rent {
+  padding: 60px 0;
+}
+
+.rent__block {
+  position: relative;
+  width: 584px;
+}
+
+.rent__block:nth-child(n+3) {
+  margin-top: 30px;
+}
+
+.rent__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.rent__link {
+  position: absolute;
+  bottom: 48px;
+  right: 78px;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.rent__link:after {
+  content: url("assets/images/arrow.svg");
+  position: absolute;
+  margin-left: 20px;
+}
+
+/*Location section*/
+
+.location {
+  padding: 100px 0;
 }
